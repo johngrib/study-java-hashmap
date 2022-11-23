@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.7.5'
+
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+java.sourceCompatibility = 11
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
